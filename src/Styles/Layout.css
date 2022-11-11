@@ -7,11 +7,6 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 .Layout-header {
   background-color: #282c34;
@@ -24,15 +19,8 @@
   color: white;
 }
 
-.Layout-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a:-webkit-any-link {
+  text-decoration-color: aliceblue;
+  text-decoration: none;
+  color: white;
 }

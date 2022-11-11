@@ -1,19 +1,25 @@
-import {useEffect, useState} from "react";
-import ReactDOM from "react-dom/client";
+import React from 'react'
+import { Card, Icon, Image } from 'semantic-ui-react'
 
- function Lessons() {
-    const [count, setCount] = useState(0);
+const Lessons = () => (
+    <Card>
+        <Image src='https://react.semantic-ui.com/images/avatar/large/matthew.png' wrapped ui={false} />
+        <Card.Content>
+            <Card.Header></Card.Header>
+            <Card.Meta>
+                <span className='date'></span>
+            </Card.Meta>
+            <Card.Description>
+                Matthew leert je de handgebaren aan van A tot Z
+            </Card.Description>
+        </Card.Content>
+        <Card.Content extra>
+            <a>
+                <Icon name='user' />
+                Les 1
+            </a>
+        </Card.Content>
+    </Card>
+)
 
-    useEffect(() => {
-        setTimeout(() => {
-            setCount((count) => count + 1);
-        }, 1000);
-    });
-
-    return <h1>I've rendered {count} times!</h1>;
-}
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Lessons />);
-
-export default Lessons;
+export default Lessons
