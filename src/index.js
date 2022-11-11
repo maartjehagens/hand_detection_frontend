@@ -2,8 +2,7 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./pages/Layout";
 import Home from "./pages/Home";
-import Contact from "./pages/Contact";
-import NoPage from "./pages/NoPage";
+import Lessons from "./pages/Lessons";
 
 export default function App() {
     return (
@@ -11,8 +10,7 @@ export default function App() {
             <Routes>
                 <Route path="/" element={<Layout />}>
                     <Route index element={<Home />} />
-                    <Route path="contact" element={<Contact />} />
-                    <Route path="*" element={<NoPage />} />
+                    <Route path="Lessons" element={<Lessons />} />
                 </Route>
             </Routes>
         </BrowserRouter>
