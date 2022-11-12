@@ -1,11 +1,8 @@
-import logo from '../Pictures/Home.png';
 import React, {useState} from "react";
 import {Button, ButtonGroup} from "@mui/material";
 
-
 const Challenge = () => {
     const [message, setMessage] = useState('')
-
     return (
         <div style={{
             justifyContent: "center",

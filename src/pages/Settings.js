@@ -1,32 +1,37 @@
-import React, {useState} from "react";
+import * as React from "react";
 import {Button, ButtonGroup} from "@mui/material";
+import {Label} from "semantic-ui-react";
 
 
 const Settings = () => {
-    const [message, setMessage] = useState('')
+const [value, setValue] = React.useState(false);
 
-    return (
-        <div style={{
-            justifyContent: "center",
-            margin: 'auto',
-            display: 'block',
-            width: 'fit-content'
-        }}>
-            <ButtonGroup color="primary"
-                         aria-label="outlined primary button group">
-                <Button
-                    onClick={()=> {
-                        setMessage('You just clicked First Button')
-                    }}
-                >Letters</Button>
-                <Button
-                    onClick={()=> {
-                        setMessage('You just clicked Second Button')
-                    }}
-                >Nummers</Button>
-            </ButtonGroup>
-            <h3>{message}</h3>
+const handleChange = () => {
+    setValue(!value);
+};
+     return (
+        <div>
+            <RadioButton
+                label="Left-Handed"
+                value={value}
+                onChange={handleChange}
+            />
+            <div>
+            <RadioButton
+                label="Right-Handed"
+                value={value}
+                onChange={handleChange}
+            />
+            </div>
         </div>
+    );
+};
+const RadioButton = ({ label, value, onChange }) => {
+    return (
+        <label>
+            <input type="radio" checked={value} onChange={onChange} />
+            {label}
+        </label>
     );
 };
 
