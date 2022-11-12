@@ -1,8 +1,9 @@
+import logo from '../Pictures/Home.png';
 import React, {useState} from "react";
-import {Button, ButtonGroup} from "@mui/material";
+import {Button, ButtonGroup, Card} from "@mui/material";
 
 
-const Lessons = () => {
+const Info = () => {
     const [message, setMessage] = useState('')
 
     return (
@@ -18,16 +19,16 @@ const Lessons = () => {
                     onClick={()=> {
                         setMessage('You just clicked First Button')
                     }}
-                >Letters</Button>
+                >Home</Button>
                 <Button
                     onClick={()=> {
                         setMessage('You just clicked Second Button')
                     }}
-                >Nummers</Button>
+                >Home</Button>
             </ButtonGroup>
             <h3>{message}</h3>
         </div>
     );
 };
 
-export default Lessons;
+export default Info;

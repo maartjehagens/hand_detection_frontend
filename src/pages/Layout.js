@@ -1,25 +1,29 @@
-import { Outlet, Link } from "react-router-dom";
-import styles from "../Styles/Layout.css";
+import { Outlet } from "react-router-dom";
 
 const Layout = () => {
     return (
         <div className="Layout">
             <header className="Layout-header">
-            <nav>
-                <ul>
-                    <li>
-                        <Link to="/">Home</Link>
-                    </li>
-                    <li>
-                        <Link to="/Lessons">Lessons</Link>
-                    </li>
-                </ul>
-            </nav>
-
-            <Outlet />
+                <a href="/Lessons">
+                    <button>Lessons</button>
+                </a>
+                <a href="/Practice">
+                    <button>Practice</button>
+                </a>
+                <a href="/Challenge">
+                    <button>Challenge</button>
+                </a>
+                <a href="/Glossary">
+                    <button>Glossary</button>
+                </a>
+                <a href="/Settings">
+                    <button>Settings</button>
+                </a>
+                <Outlet />
             </header>
         </div>
-)
+    )
 };
 
 export default Layout;
+

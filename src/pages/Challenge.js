@@ -1,8 +1,9 @@
+import logo from '../Pictures/Home.png';
 import React, {useState} from "react";
 import {Button, ButtonGroup} from "@mui/material";
 
 
-const Lessons = () => {
+const Challenge = () => {
     const [message, setMessage] = useState('')
 
     return (
@@ -30,4 +31,4 @@ const Lessons = () => {
     );
 };
 
-export default Lessons;
+export default Challenge;

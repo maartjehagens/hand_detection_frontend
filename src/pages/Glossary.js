@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import {Button, ButtonGroup} from "@mui/material";
 
 
-const Lessons = () => {
+const Glossary = () => {
     const [message, setMessage] = useState('')
 
     return (
@@ -16,18 +16,18 @@ const Lessons = () => {
                          aria-label="outlined primary button group">
                 <Button
                     onClick={()=> {
-                        setMessage('You just clicked First Button')
+                        setMessage('Letter A')
                     }}
-                >Letters</Button>
+                >A</Button>
                 <Button
                     onClick={()=> {
-                        setMessage('You just clicked Second Button')
+                        setMessage('Letter B')
                     }}
-                >Nummers</Button>
+                >B</Button>
             </ButtonGroup>
             <h3>{message}</h3>
         </div>
     );
 };
 
-export default Lessons;
+export default Glossary;

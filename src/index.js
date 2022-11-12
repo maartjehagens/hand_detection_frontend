@@ -1,16 +1,23 @@
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./pages/Layout";
-import Home from "./pages/Home";
+import Practice from "./pages/Practice";
 import Lessons from "./pages/Lessons";
+import Challenge from "./pages/Challenge";
+import Glossary from "./pages/Glossary";
+import Settings from "./pages/Settings";
+
 
 export default function App() {
     return (
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Layout />}>
-                    <Route index element={<Home />} />
                     <Route path="Lessons" element={<Lessons />} />
+                    <Route path="Practice" element={<Practice />} />
+                    <Route path="Challenge" element={<Challenge />} />
+                    <Route path="Glossary" element={<Glossary />} />
+                    <Route path="Settings" element={<Settings />} />
                 </Route>
             </Routes>
         </BrowserRouter>
