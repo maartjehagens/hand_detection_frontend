@@ -10,18 +10,15 @@ const Challenge = () => {
             display: 'block',
             width: 'fit-content'
         }}>
+            <h5>Level 1</h5>
+            <h3>Beginner 1</h3>
             <ButtonGroup color="primary"
                          aria-label="outlined primary button group">
                 <Button
                     onClick={()=> {
-                        setMessage('You just clicked First Button')
+                        setMessage('Challenge - Level 1')
                     }}
-                >Letters</Button>
-                <Button
-                    onClick={()=> {
-                        setMessage('You just clicked Second Button')
-                    }}
-                >Nummers</Button>
+                >Start</Button>
             </ButtonGroup>
             <h3>{message}</h3>
         </div>

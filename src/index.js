@@ -7,7 +7,6 @@ import Challenge from "./pages/Challenge";
 import Glossary from "./pages/Glossary";
 import Settings from "./pages/Settings";
 
-
 export default function App() {
     return (
         <BrowserRouter>

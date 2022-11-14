@@ -17,14 +17,14 @@ const Info = () => {
                          aria-label="outlined primary button group">
                 <Button
                     onClick={()=> {
-                        setMessage('You just clicked First Button')
+                        setMessage('Improve your expressive Skills by fingerspelling the words displayed on the screen.')
                     }}
-                >Home</Button>
+                >Signing</Button>
                 <Button
                     onClick={()=> {
-                        setMessage('You just clicked Second Button')
+                        setMessage('Improve your receptive skills by watching a signer fingerspell words and typing what you see.')
                     }}
-                >Home</Button>
+                >Recognition</Button>
             </ButtonGroup>
             <h3>{message}</h3>
         </div>

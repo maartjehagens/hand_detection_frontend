@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import {Button, ButtonGroup} from "@mui/material";
+import { IconButton } from '@mui/material';
 
 
 const Lessons = () => {
@@ -16,15 +17,22 @@ const Lessons = () => {
                          aria-label="outlined primary button group">
                 <Button
                     onClick={()=> {
-                        setMessage('You just clicked First Button')
+                        setMessage('Letters A-H ' +
+                            '             Letters I-P ' + 
+                            '             Letters Q-Z')
                     }}
                 >Letters</Button>
                 <Button
                     onClick={()=> {
-                        setMessage('You just clicked Second Button')
+                        setMessage('Numbers 1-9')
                     }}
                 >Nummers</Button>
             </ButtonGroup>
+            <IconButton
+                onClick={()=> {
+                    setMessage('What is Fingerspelling....')
+                }}
+            >Intro</IconButton>
             <h3>{message}</h3>
         </div>
     );
