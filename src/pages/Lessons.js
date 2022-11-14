@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import {Button, ButtonGroup} from "@mui/material";
 import { IconButton } from '@mui/material';
+import logo from '../Pictures/Hello.jpeg';
 
 
 const Lessons = () => {
@@ -34,6 +35,7 @@ const Lessons = () => {
                 }}
             >Intro</IconButton>
             <h3>{message}</h3>
+            <img src={logo}  width="320" height="290"  alt={logo}/>
         </div>
     );
 };
