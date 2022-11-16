@@ -13,6 +13,7 @@ const Info = () => {
             display: 'block',
             width: 'fit-content'
         }}>
+
             <ButtonGroup color="primary"
                          aria-label="outlined primary button group">
                 <Button

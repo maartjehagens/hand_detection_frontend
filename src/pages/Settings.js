@@ -1,40 +1,17 @@
 import * as React from "react";
 
-
 const Settings = () => {
-const [leftHand, setLeftHand] = React.useState(false);
-const [rightHand, setRightHand] = React.useState(false);
-
-const handleChangeLeft = () => {
-    setLeftHand(!leftHand);
-};
-
-    const handleChangeRight = () => {
-        setRightHand(!rightHand);
-    };
      return (
-        <div>
-            <RadioButton
-                label="Left-Handed"
-                value={leftHand}
-                onChange={handleChangeLeft}
-            />
-            <div>
-            <RadioButton
-                label="Right-Handed"
-                value={rightHand}
-                onChange={handleChangeRight}
-            />
-            </div>
-        </div>
-    );
-};
-const RadioButton = ({ label, value, onChange }) => {
-    return (
-        <label>
-            <input type="radio" checked={value} onChange={onChange} />
-            {label}
-        </label>
+         <form>
+                 <legend>Dominant hand</legend>
+                 <div>
+                     <input type="radio" id="contactChoice1" name="contact" value="Left-handed"/>
+                     <label htmlFor="contactChoice1">Left-handed</label>
+
+                     <input type="radio" id="contactChoice2" name="contact" value="Right-handed"/>
+                     <label htmlFor="contactChoice2">Right-handed</label>
+                 </div>
+         </form>
     );
 };
 
