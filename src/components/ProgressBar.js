@@ -1,22 +1,29 @@
-import react from 'react';
-import PropTypes from 'prop-types'
+ import React from 'react';
 
-const ProgressBar = ({ value, max}) => {
-return (
-    <div>
-        <progress value={value} max={max} />
-    <span>{(value /max) * 100}%</span>
-    </div>
-)    
+const containerStyle = {
+    border: '1px solid silver',
+    background: '#ededed'
 };
 
-ProgressBar.propTypes = {
-    value: PropTypes.number.isRequired,
-    max: PropTypes.number
+const contentStyle = {
+    background: '#00cc00',
+    height: '24px',
+    textAlign: 'center',
+    lineHeight: '24px',
+    fontFamily: 'sans-serif',
+    transition: '0.3s'
 };
 
-ProgressBar.defaultProps = {
-    max:100
+ const ProgressBar = ({progress}) => {
+    const state = `${progress}%`;
+    return (
+        <div style={containerStyle}>
+            <div style={{...contentStyle, width: state}}>
+                {progress > 5 ? state : ''}
+            </div>
+        </div>
+    );
 };
 
-export default ProgressBar;
+    
+export default ProgressBar

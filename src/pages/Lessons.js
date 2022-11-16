@@ -3,27 +3,12 @@ import {Button, ButtonGroup} from "@mui/material";
 import { IconButton } from '@mui/material';
 import logo from '../Pictures/Hello.jpeg';
 import ProgressBar from "../components/ProgressBar";
-import ProgressBar2 from "../components/ProgressBar2";
 
 const Lessons = () => {
     const [message, setMessage] = useState('')
     const [value, setValue] = useState(0);
     const progressBarColor = "#F5CF97";
     const [progress, setProgress] = React.useState(25);
-    
-    
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setValue((oldValue) => {
-                const newValue = oldValue + 10;
-                
-                if(newValue === 100)  {
-                    clearInterval(interval);
-                }
-                return newValue;
-            })
-        }, 1000)
-    }, [])
     
     return (
         <div style={{
@@ -32,14 +17,10 @@ const Lessons = () => {
             display: 'block',
             width: 'fit-content'
         }}>
+            <ProgressBar />
 
-            <ProgressBar value={value} max={100}/>
-         <ProgressBar2 />
-
-
-     
             <div>
-                <ProgressBar progress={progress}  value={progress}/>
+                <ProgressBar progress={progress}  value={progress} completed={progress}/>
                 <br />
                 <div>
                     <button onClick={() => setProgress(0)}>0%</button>
