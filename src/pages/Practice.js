@@ -1,9 +1,10 @@
 import React, {useState} from "react";
 import {ProgressBar2} from "../components/ProgressBar2"
-import { Container, Row, Col } from "react-bootstrap"
-import {Button, Card} from "@mui/material";
-import "../Styles/ProgressBar2.css";
+import { Container, Row, Col, Card } from "react-bootstrap"
+import {Button} from "@mui/material";
+import "../Styles/Practice.css";
 import {Questions} from "../components/Questions";
+import {ProgressBar2Form} from "../components/ProgressBar2Form";
 
 function Practice () {
     const [index, setIndex] = useState(1);
@@ -39,29 +40,37 @@ function Practice () {
     return (
         <div className="Practice">
             <Container className="h-100">
-                <Row className="m-5">
-                    <Col className="align-self-center">
-                        <ProgressBar2
-                            step={index}
-                        />
+                 <Row className="m-5">
+                    <Col className="h-100">
+                    <ProgressBar2
+                    step={index}
+                    />
                     </Col>
-                </Row>
+                    </Row> 
                 <Row>
                     {
                         submitted ?
                             <Card>
-                                <p>Your answers have been submitted!</p>
-                                <Button onClick={handleStart}>Start Over</Button>
+                                <Card.Body>
+                                    <p>Your answers have been submitted!</p>
+                                </Card.Body>
+                                <Card.Footer>
+                                    <Button onClick={handleStart}>Start Over</Button>
+                                </Card.Footer>
                             </Card> :
                             <Card>
-                                <ProgressBar2
-                                    list={Questions}
-                                    step={index}
-                                    onPageUpdate={onPageAnswerUpdate}
-                                    pagesAnswers={pagesAnswers}
-                                />
-                                <Button onClick={prevButton} disabled={index === 1}>Previous</Button>
-                                <Button onClick={nextButton}>{index === totalPagesCount ? 'Submit' : 'Next'}</Button>
+                                <Card.Body>
+                                    <ProgressBar2Form
+                                        list={Questions}
+                                        step={index}
+                                        onPageUpdate={onPageAnswerUpdate}
+                                        pagesAnswers={pagesAnswers}
+                                    />
+                                </Card.Body>
+                                    <Card.Footer className="d-flex justify-content-between">
+                                    <Button onClick={prevButton} disabled={index === 1}>Previous</Button>
+                                    <Button onClick={nextButton}>{index === totalPagesCount ? 'Submit' : 'Next'}</Button>
+                                </Card.Footer>
                             </Card>
                     }
                 </Row>
