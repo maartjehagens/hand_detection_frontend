@@ -7,8 +7,8 @@ import ProgressBar from "../components/ProgressBar";
 const Lessons = () => {
     const [message, setMessage] = useState('')
     const [value, setValue] = useState(0);
-    const progressBarColor = "#F5CF97";
-    const [progress, setProgress] = React.useState(25);
+    //const progressBarColor = "#F5CF97";
+    const [progress, setProgress] = React.useState(0);
     
     return (
         <div style={{
@@ -17,19 +17,10 @@ const Lessons = () => {
             display: 'block',
             width: 'fit-content'
         }}>
-            <ProgressBar />
-
             <div>
                 <ProgressBar progress={progress}  value={progress} completed={progress}/>
                 <br />
-                <div>
-                    <button onClick={() => setProgress(0)}>0%</button>
-                    <button onClick={() => setProgress(5)}>5%</button>
-                    <button onClick={() => setProgress(15)}>15%</button>
-                    <button onClick={() => setProgress(50)}>50%</button>
-                    <button onClick={() => setProgress(75)}>75%</button>
-                    <button onClick={() => setProgress(100)}>100%</button>
-                </div>
+                
             </div>
         
             
@@ -54,6 +45,14 @@ const Lessons = () => {
                 }}
             >Intro</IconButton>
             <h3>{message}</h3>
+            <div>
+                <button onClick={() => setProgress(0)}>0%</button>
+                <button onClick={() => setProgress(5)}>5%</button>
+                <button onClick={() => setProgress(15)}>15%</button>
+                <button onClick={() => setProgress(50)}>50%</button>
+                <button onClick={() => setProgress(75)}>75%</button>
+                <button onClick={() => setProgress(100)}>100%</button>
+            </div>
             <img src={logo}  width="320" height="290"  alt={logo}/>
         </div>
     );
