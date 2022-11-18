@@ -3,12 +3,12 @@ export const Questions = [
         section: 1,
         items: [
             {
-                label: 'username',
+                label: 'Letter A',
                 type: 'text',
                 value: 'username'
             },
             {
-                label: 'password',
+                label: 'Letter B',
                 type: 'password',
                 value: 'password'
             }
