@@ -1,4 +1,4 @@
- import React from 'react';
+import React from 'react';
 
 const containerStyle = {
     border: '1px solid silver',
@@ -14,7 +14,7 @@ const contentStyle = {
     transition: '0.3s'
 };
 
- const ProgressBar = ({progress}) => {
+const ProgressBar = ({progress}) => {
     const state = `${progress}%`;
     return (
         <div style={containerStyle}>
@@ -25,5 +25,5 @@ const contentStyle = {
     );
 };
 
-    
+
 export default ProgressBar

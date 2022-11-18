@@ -31,7 +31,7 @@ export const Questions = [
                 label: 'State',
                 type: 'select',
                 value: 'state',
-                options: [ 'State 1', 'State 2']
+                options: ['State 1', 'State 2']
             }
         ]
     },

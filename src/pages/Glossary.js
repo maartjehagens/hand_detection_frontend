@@ -15,12 +15,12 @@ const Glossary = () => {
             <ButtonGroup color="primary"
                          aria-label="outlined primary button group">
                 <Button
-                    onClick={()=> {
+                    onClick={() => {
                         setMessage('Letter A')
                     }}
                 >A</Button>
                 <Button
-                    onClick={()=> {
+                    onClick={() => {
                         setMessage('Letter B')
                     }}
                 >B</Button>

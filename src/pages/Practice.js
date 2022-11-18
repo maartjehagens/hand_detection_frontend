@@ -1,12 +1,12 @@
 import React, {useState} from "react";
 import {ProgressBar2} from "../components/ProgressBar2"
-import { Container, Row, Col, Card } from "react-bootstrap"
+import {Container, Row, Col, Card} from "react-bootstrap"
 import {Button} from "@mui/material";
 import "../Styles/Practice.css";
 import {Questions} from "../components/Questions";
 import {ProgressBar2Form} from "../components/ProgressBar2Form";
 
-function Practice () {
+function Practice() {
     const [index, setIndex] = useState(1);
     const [submitted, setSubmitted] = useState(false);
     const totalPagesCount = Questions?.length || 0;
@@ -40,13 +40,13 @@ function Practice () {
     return (
         <div className="Practice">
             <Container className="h-100">
-                 <Row className="m-5">
+                <Row className="m-5">
                     <Col className="h-100">
-                    <ProgressBar2
-                    step={index}
-                    />
+                        <ProgressBar2
+                            step={index}
+                        />
                     </Col>
-                    </Row> 
+                </Row>
                 <Row>
                     {
                         submitted ?
@@ -67,9 +67,10 @@ function Practice () {
                                         pagesAnswers={pagesAnswers}
                                     />
                                 </Card.Body>
-                                    <Card.Footer className="d-flex justify-content-between">
+                                <Card.Footer className="d-flex justify-content-between">
                                     <Button onClick={prevButton} disabled={index === 1}>Previous</Button>
-                                    <Button onClick={nextButton}>{index === totalPagesCount ? 'Submit' : 'Next'}</Button>
+                                    <Button
+                                        onClick={nextButton}>{index === totalPagesCount ? 'Submit' : 'Next'}</Button>
                                 </Card.Footer>
                             </Card>
                     }

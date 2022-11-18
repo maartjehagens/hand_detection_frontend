@@ -1,9 +1,7 @@
+import {Form} from "react-bootstrap";
+import {useState} from "react";
 
-
-import { Form } from "react-bootstrap";
-import { useState } from "react";
-
-export const FormItem =  ({ item, onChange, answer })  => {
+export const FormItem = ({item, onChange, answer}) => {
     const [currentValue, setCurrentValue] = useState(answer || null);
 
     const handleChange = (value) => {

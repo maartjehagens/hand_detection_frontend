@@ -1,6 +1,6 @@
 import React from "react";
 import "react-step-progress-bar/styles.css";
-import { ProgressBar, Step } from "react-step-progress-bar";
+import {ProgressBar, Step} from "react-step-progress-bar";
 import "../Styles/ProgressBar2.css";
 
 export const ProgressBar2 = (props) => {
@@ -10,7 +10,7 @@ export const ProgressBar2 = (props) => {
             filledBackground="indigo"
         >
             <Step transition="scale">
-                {({ accomplished, index }) => (
+                {({accomplished, index}) => (
                     <div
                         className={`step ${accomplished ? "completed" : null}`}
                     >
@@ -19,7 +19,7 @@ export const ProgressBar2 = (props) => {
                 )}
             </Step>
             <Step transition="scale">
-                {({ accomplished, index }) => (
+                {({accomplished, index}) => (
                     <div
                         className={`step ${accomplished ? "completed" : null}`}
                     >
@@ -28,7 +28,7 @@ export const ProgressBar2 = (props) => {
                 )}
             </Step>
             <Step transition="scale">
-                {({ accomplished, index }) => (
+                {({accomplished, index}) => (
                     <div
                         className={`step ${accomplished ? "completed" : null}`}
                     >

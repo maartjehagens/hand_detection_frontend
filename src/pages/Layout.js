@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import {Outlet} from "react-router-dom";
 import "../Styles/Layout.css";
 
 const Layout = () => {
@@ -20,7 +20,7 @@ const Layout = () => {
                 <a href="/Settings">
                     <button>Settings</button>
                 </a>
-                <Outlet />
+                <Outlet/>
             </header>
         </div>
     )

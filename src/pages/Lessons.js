@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import {Button, ButtonGroup} from "@mui/material";
-import { IconButton } from '@mui/material';
+import {IconButton} from '@mui/material';
 import logo from '../Pictures/Hello.jpeg';
 import ProgressBar from "../components/ProgressBar";
 
@@ -9,7 +9,7 @@ const Lessons = () => {
     const [value, setValue] = useState(0);
     //const progressBarColor = "#F5CF97";
     const [progress, setProgress] = React.useState(0);
-    
+
     return (
         <div style={{
             justifyContent: "center",
@@ -18,29 +18,29 @@ const Lessons = () => {
             width: 'fit-content'
         }}>
             <div>
-                <ProgressBar progress={progress}  value={progress} completed={progress}/>
-                <br />
-                
+                <ProgressBar progress={progress} value={progress} completed={progress}/>
+                <br/>
+
             </div>
-        
-            
+
+
             <ButtonGroup color="primary"
                          aria-label="outlined primary button group">
                 <Button
-                    onClick={()=> {
+                    onClick={() => {
                         setMessage('Letters A-H ' +
-                            '             Letters I-P ' + 
+                            '             Letters I-P ' +
                             '             Letters Q-Z')
                     }}
                 >Letters</Button>
                 <Button
-                    onClick={()=> {
+                    onClick={() => {
                         setMessage('Numbers 1-9')
                     }}
                 >Nummers</Button>
             </ButtonGroup>
             <IconButton
-                onClick={()=> {
+                onClick={() => {
                     setMessage('What is Fingerspelling....')
                 }}
             >Intro</IconButton>
@@ -53,7 +53,7 @@ const Lessons = () => {
                 <button onClick={() => setProgress(75)}>75%</button>
                 <button onClick={() => setProgress(100)}>100%</button>
             </div>
-            <img src={logo}  width="320" height="290"  alt={logo}/>
+            <img src={logo} width="320" height="290" alt={logo}/>
         </div>
     );
 };
