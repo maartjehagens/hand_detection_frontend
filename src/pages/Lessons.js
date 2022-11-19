@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from "react";
 import {Button, ButtonGroup} from "@mui/material";
 import {IconButton} from '@mui/material';
-import logo from '../Pictures/Hello.jpeg';
 import ProgressBar from "../components/ProgressBar";
 
 const Lessons = () => {
@@ -53,7 +52,6 @@ const Lessons = () => {
                 <button onClick={() => setProgress(75)}>75%</button>
                 <button onClick={() => setProgress(100)}>100%</button>
             </div>
-            <img src={logo} width="320" height="290" alt={logo}/>
         </div>
     );
 };
