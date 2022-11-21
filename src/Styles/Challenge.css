@@ -25,3 +25,34 @@ button:hover {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 20px;
 }
+
+.Challenge {
+    margin-top: 180px;
+}
+
+.grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.rowChallenge {
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    gap: 10px;
+}
+
+.cardChallenge {
+    padding: 20px;
+    background-color: lightcoral;
+    width: 50px;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardChallenge:hover {
+    background: #E9E9E9
+}
